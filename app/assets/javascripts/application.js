@@ -8,10 +8,18 @@
 // compiled file.
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
+// about supported directives.//= require_tree_.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require_tree .
+//= require gsap/main-gsap
+//= require bootstrap
+//= require joinable
+//= require resizeable
+//= require neon-api
+//= require cookies.min
+//= require neon-custom
+

@@ -7,14 +7,121 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script>$.noConflict();</script> 
   </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+  <body class="page-body page-fade skin-white" data-url="http://demo.neontheme.com">
+  
+    <div class="page-container">
+      <div class="sidebar-menu">
+        <div class="sidebar-menu-inner">
+           <header class="logo-env">
+              <!-- logo --> 
+              <div class="logo"> 
+                <a href="dashboard/main/index.html"> 
+                  <%= image_tag("logo-light@2x.png", width:"120", alt:"") %>
+                </a> 
+              </div>
+              <!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) --> 
+              <div class="sidebar-mobile-menu visible-xs">
+                 <a href="#" class="with-animation">
+                    <!-- add class "with-animation" to support animation --> <i class="entypo-menu"></i> 
+                 </a>
+              </div>
+           </header>
+           <ul id="main-menu" class="main-menu">
+              
+              <li class="active">
+                     <a href="#"><i class="entypo-flow-tree"></i><span class="title">Sensores</span></a> 
+                     <ul class="opened">
+                        <li> <a href="index.html#"><i class="entypo-flow-line"></i><span class="title">Monitoramento</span></a> </li>
+                        <li> <a href="index.html#"><i class="entypo-flow-line"></i><span class="title">Não cadastrados</span></a> </li>
+                     </ul>
+                  </li>
+              
+           </ul>
+        </div>
+     </div>
+
+
+      <div class="main-content">
+        <div class="row">
+           <!-- Profile Info and Notifications --> 
+           <div class="col-md-6 col-sm-8 clearfix">
+              <ul class="user-info pull-left pull-none-xsm">
+                 <!-- Profile Info --> 
+                 <li class="profile-info dropdown">
+                    <!-- add class "pull-right" if you want to place this from right --> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="/assets/thumb-1@2x.png" alt="" class="img-circle" width="44" />
+                    Usuário demostração
+                    </a> 
+                    <ul class="dropdown-menu">
+                       <!-- Reverse Caret --> 
+                       <li class="caret"></li>
+                       <!-- Profile sub-links --> 
+                       <li> <a href="extra/timeline/index.html"> <i class="entypo-user"></i>
+                          Edit Profile
+                          </a> 
+                       </li>
+                       <li> <a href="mailbox/main/index.html"> <i class="entypo-mail"></i>
+                          Inbox
+                          </a> 
+                       </li>
+                       <li> <a href="extra/calendar/index.html"> <i class="entypo-calendar"></i>
+                          Calendar
+                          </a> 
+                       </li>
+                       <li> <a href="#"> <i class="entypo-clipboard"></i>
+                          Tasks
+                          </a> 
+                       </li>
+                    </ul>
+                 </li>
+              </ul>
+          
+           </div>
+           <!-- Raw Links --> 
+           <div class="col-md-6 col-sm-4 clearfix hidden-xs">
+              <ul class="list-inline links-list pull-right">
+                 <li class="dropdown language-selector">
+                    Idioma: &nbsp;
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true"> 
+                      <img src="/assets/flag-br.png" /> 
+                    </a> 
+                    <ul class="dropdown-menu pull-right">
+                       <li> <a href="#"> <img src="/assets/flag-uk.png" /> <span>Deutsch</span> </a> </li>
+                        <li> <a href="#"> <img src="/assets/flag-de.png" /> <span>Deutsch</span> </a> </li>
+                       <li class="active"> <a href="#"> <img src="/assets/flag-uk.png" /> <span>English</span> </a> </li>
+                       <li> <a href="#"> <img src="/assets/flag-fr.png" /> <span>François</span> </a> </li>
+                       <li> <a href="#"> <img src="/assets/flag-al.png" /> <span>Shqip</span> </a> </li>
+                       <li> <a href="#"> <img src="/assets/flag-es.png" /> <span>Español</span> </a> </li>
+                    </ul>
+                 </li>
+                 <li class="sep"></li>
+                 <li> <a href="extra/login/index.html">
+                    Sair <i class="entypo-logout right"></i> </a> 
+                 </li>
+              </ul>
+           </div>
+        </div>
+
+        <h2>Monitoramento dos sensores</h2>
+        <br>
+        <%= render 'layouts/table' %>
+
+    </div>  
+    
+
+
+
+
+
+
+    <!-- <header> -->
+      <!-- <%= render 'layouts/navigation' %> -->
+    <!-- </header> -->
+    <!-- <main role="main"> -->
+       <!-- <%= render 'layouts/messages' %> -->
+       <!-- <%= yield %> -->
+    <!-- </main> -->
+  
   </body>
 </html>
